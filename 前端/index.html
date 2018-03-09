@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>rsa加密</title>
+</head>
+<body>
+<label>加密前:</label><input id="mignwen">
+<p/>
+<label>加密后:</label><input id="miwen">
+<p/>
+<button onclick='encode()'>加密</button>
+<p/>
+<button onclick='decode()'>解密</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jsencrypt.min.js"></script>
+    <script src="encrypt.js"></script>
+	<script>
+	function encode(){
+	$('#miwen')[0].value = encrypt($('#mignwen')[0].value);
+	$('#mignwen')[0].value = '';
+	}
+		function decode(){
+	$('#mignwen')[0].value = decrypt($('#miwen')[0].value);
+	$('#miwen')[0].value = '';
+	}
+	</script>
+</html>
